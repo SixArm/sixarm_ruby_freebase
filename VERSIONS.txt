@@ -1,0 +1,12 @@
+VERSIONS
+
+1.0.2
+- Freebase.read for muliple queries:
+  Freebase.read(query1,query2,query3)
+- gem dependency on json
+- remove gem dependency on httparty, echoe, hoe
+
+1.0.0
+- Freebase.read for one query:
+  Freebase.read(query)
+- gem dependency on httparty, echoe, hoe

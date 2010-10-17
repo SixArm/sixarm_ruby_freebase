@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Freebase</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/sixarm_ruby_freebase_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sixarm_ruby_freebase.rb">lib/sixarm_ruby_freebase.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000012">::get</a></li>
+					
+					<li><a href="#M000001">::name_query</a></li>
+					
+					<li><a href="#M000011">::queries_cooker</a></li>
+					
+					<li><a href="#M000000">::read</a></li>
+					
+					<li><a href="#M000002">::read_uri</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./INSTALL_txt.html">INSTALL.txt</a></li>
+				
+					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="./VERSIONS_txt.html">VERSIONS.txt</a></li>
+				
+					<li class="file"><a href="./sixarm_pem.html">sixarm.pem</a></li>
+				
+					<li class="file"><a href="./sixarm_ruby_freebase_gemspec.html">sixarm_ruby_freebase.gemspec</a></li>
+				
+					<li class="file"><a href="./sixarm_ruby_freebase_sha512_txt.html">sixarm_ruby_freebase.sha512.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./Freebase.html">Freebase</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./NilClass.html">NilClass</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./Testing.html">Testing</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Freebase</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="name-query-method" class="method-detail ">
+				<a name="M000001"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">name_query</span><span
+						class="method-args">(*names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Construct a query to look up a person in <a
+href="Freebase.html">Freebase</a> with the given name (or list of name
+alternatives) and return all the info we want.
+</p>
+<p>
+Most things are only used for scoring, rather than constraining the lookup,
+so they&#8217;re optional. # From Tom Morris <tfmorris@gmail.com> on the <a
+href="Freebase.html">Freebase</a> email list
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="name-query-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sixarm_ruby_freebase.rb, line 123</span>
+123:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">name_query</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>)
+124: 
+125:     <span class="ruby-identifier">names</span>.<span class="ruby-identifier">flatten!</span>
+126: 
+127:     <span class="ruby-identifier">subquery</span> = {
+128:       <span class="ruby-value str">'lang'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/lang/en'</span>,
+129:       <span class="ruby-value str">'link|='</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value str">'/type/object/name'</span>,<span class="ruby-value str">'/common/topic/alias'</span>],
+130:       <span class="ruby-value str">'type'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/type/text'</span>
+131:     }
+132: 
+133:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>
+134:       <span class="ruby-identifier">subquery</span>[<span class="ruby-value str">'value|='</span>] = <span class="ruby-identifier">names</span>
+135:     <span class="ruby-keyword kw">else</span>
+136:       <span class="ruby-identifier">name</span>=<span class="ruby-identifier">names</span>[<span class="ruby-value">0</span>]
+137:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\*/</span>
+138:         <span class="ruby-identifier">subquery</span>[<span class="ruby-value str">'value~='</span>] = <span class="ruby-identifier">name</span>
+139:       <span class="ruby-keyword kw">else</span>
+140:         <span class="ruby-identifier">subquery</span>[<span class="ruby-value str">'value'</span>] = <span class="ruby-identifier">name</span>
+141:       <span class="ruby-keyword kw">end</span>
+142:     <span class="ruby-keyword kw">end</span>
+143: 
+144:     <span class="ruby-identifier">query</span> = {
+145:       <span class="ruby-value str">'/type/reflect/any_value'</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">subquery</span>],
+146:       <span class="ruby-value str">'t1:type'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/people/person'</span>,
+147:       <span class="ruby-value str">'t2:type'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/common/topic'</span>,
+148:       <span class="ruby-value str">'t3:type'</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value str">'name'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/people/deceased_person'</span>,<span class="ruby-value str">'optional'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'optional'</span> },
+149:       <span class="ruby-value str">'id'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'null'</span>,
+150:     }
+151: 
+152:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="read-method" class="method-detail ">
+				<a name="M000000"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read</span><span
+						class="method-args">(*queries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Given a query (or multiple queries), return the <a
+href="Freebase.html">Freebase</a> JSON.
+</p>
+<p>
+Example query
+</p>
+<pre>
+  query = '{&quot;id&quot;:&quot;/en/china&quot;,&quot;capital&quot;:null,&quot;type&quot;:&quot;/location/country&quot;}'
+  Freebase.read(query)
+  =&gt; {&quot;id&quot;=&gt;&quot;/en/china&quot;, &quot;type&quot;=&gt;&quot;/location/country&quot;, &quot;capital&quot;=&gt;&quot;Beijing&quot;}
+</pre>
+<p>
+Example query with result
+</p>
+<pre>
+  Freebase.read(query)['capital']
+  =&gt; &quot;Beijing&quot;
+</pre>
+<p>
+Example queries
+</p>
+<pre>
+  query1 = '{&quot;id&quot;:&quot;/en/india&quot;,&quot;capital&quot;:null,&quot;type&quot;:&quot;/location/country&quot;}'
+  query2 = '{&quot;id&quot;:&quot;/en/japan&quot;,&quot;capital&quot;:null,&quot;type&quot;:&quot;/location/country&quot;}'
+  Freebase.read(query1,query2)
+  =&gt; [{&quot;id&quot;=&gt;&quot;/en/india&quot;, &quot;type&quot;=&gt;&quot;/location/country&quot;, &quot;capital&quot;=&gt;&quot;New Delhi&quot;},
+      {&quot;id&quot;=&gt;&quot;/en/japan&quot;, &quot;type&quot;=&gt;&quot;/location/country&quot;, &quot;capital&quot;=&gt;&quot;Tokyo&quot;}]
+</pre>
+<p>
+Example queries with results
+</p>
+<pre>
+  Freebase.read(query1,query2).map{|result| result['capital']}
+  =&gt; [&quot;New Delhi&quot;,&quot;Tokyo&quot;]
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="read-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sixarm_ruby_freebase.rb, line 105</span>
+105:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">queries</span>)
+106:     <span class="ruby-identifier">queries</span>.<span class="ruby-identifier">flatten!</span>
+107:     <span class="ruby-identifier">got</span>=<span class="ruby-identifier">get</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">read_uri</span>(<span class="ruby-identifier">queries</span>))
+108:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">queries</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">1</span> \
+109:     <span class="ruby-operator">?</span> ((<span class="ruby-identifier">result</span>=<span class="ruby-identifier">got</span>[<span class="ruby-value str">'result'</span>]) <span class="ruby-operator">?</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>) \
+110:     <span class="ruby-operator">:</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">queries</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">result</span>=<span class="ruby-identifier">got</span>[<span class="ruby-node">&quot;q#{i}&quot;</span>][<span class="ruby-value str">'result'</span>]) <span class="ruby-operator">?</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span> }
+111:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-class-method-details" class="method-section section">
+			<h3 class="section-header">Protected Class Methods</h3>
+
+		
+			<div id="get-method" class="method-detail ">
+				<a name="M000012"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get</span><span
+						class="method-args">(uri)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Given a URI, get it using HTTP.get, then return JSON.parse
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sixarm_ruby_freebase.rb, line 179</span>
+179:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">uri</span>)
+180:     <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">uri</span>))
+181:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="queries-cooker-method" class="method-detail ">
+				<a name="M000011"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">queries_cooker</span><span
+						class="method-args">(*queries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Convert from a query (or queries) of any Class to an an <a
+href="Array.html">Array</a> of Strings
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="queries-cooker-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sixarm_ruby_freebase.rb, line 174</span>
+174:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">queries_cooker</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">queries</span>)
+175:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">queries</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">to_freebase_query</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">to_s</span> }
+176:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="read-uri-method" class="method-detail ">
+				<a name="M000002"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_uri</span><span
+						class="method-args">(*queries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Given a query (or queries), return the <a href="Freebase.html">Freebase</a>
+URI
+</p>
+<p>
+The query can be any class; we will convert it to a string:
+</p>
+<ul>
+<li>Hash: we call to_json
+
+</li>
+<li>String: we use as-is
+
+</li>
+<li>anything else: we call to_s
+
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="read-uri-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sixarm_ruby_freebase.rb, line 164</span>
+164:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">read_uri</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">queries</span>)
+165:     <span class="ruby-identifier">queries</span>=<span class="ruby-identifier">queries_cooker</span>(<span class="ruby-identifier">queries</span>)
+166:     <span class="ruby-identifier">q</span> = <span class="ruby-identifier">queries</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">1</span> \
+167:     <span class="ruby-operator">?</span> <span class="ruby-node">&quot;query={\&quot;query\&quot;:[#{queries[0]}]}&quot;</span> \
+168:     <span class="ruby-operator">:</span> <span class="ruby-value str">'queries={'</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">queries</span>.<span class="ruby-identifier">each_with_index</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">q</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;\&quot;q#{i}\&quot;:{\&quot;query\&quot;:[#{q}]}&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>))<span class="ruby-operator">+</span><span class="ruby-value str">'}'</span>
+169:     <span class="ruby-constant">URI</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'http'</span>,<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">'www.freebase.com'</span>,<span class="ruby-value">80</span>,<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">'/api/service/mqlread'</span>,<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">q</span>,<span class="ruby-keyword kw">nil</span>)
+170:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

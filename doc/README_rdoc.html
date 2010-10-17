@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: README.rdoc [sixarm_ruby_freebase]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./INSTALL_txt.html">INSTALL.txt</a></li>
+				
+					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="./VERSIONS_txt.html">VERSIONS.txt</a></li>
+				
+					<li class="file"><a href="./sixarm_pem.html">sixarm.pem</a></li>
+				
+					<li class="file"><a href="./sixarm_ruby_freebase_gemspec.html">sixarm_ruby_freebase.gemspec</a></li>
+				
+					<li class="file"><a href="./sixarm_ruby_freebase_sha512_txt.html">sixarm_ruby_freebase.sha512.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./Freebase.html">Freebase</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./NilClass.html">NilClass</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./Testing.html">Testing</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>SixArm Ruby Gem: <a href="Freebase.html">Freebase</a> client with a simple way to query Freebase.com</h1>
+<table>
+<tr><td valign="top">Author:</td><td>Joel Parker Henderson, joelparkerhenderson@gmail.com
+
+</td></tr>
+<tr><td valign="top">Copyright:</td><td>Copyright &#169; 2008-2010 Joel Parker Henderson
+
+</td></tr>
+<tr><td valign="top">License:</td><td>CreativeCommons License, Non-commercial Share Alike
+
+</td></tr>
+<tr><td valign="top">License:</td><td>LGPL, GNU Lesser General Public License
+
+</td></tr>
+</table>
+<p>
+Install
+</p>
+<pre>
+  gem sources --add http://sixarm.com
+  gem install sixarm_ruby_freebase
+</pre>
+<p>
+Example
+</p>
+<pre>
+  require 'rubygems'
+  require 'freebase'
+  require 'pp'
+
+  query = '{&quot;id&quot;:&quot;/en/china&quot;,&quot;capital&quot;:null,&quot;type&quot;:&quot;/location/country&quot;}'
+
+  pp Freebase.read(query)
+  #=&gt; {&quot;id&quot;=&gt;&quot;/en/china&quot;, &quot;type&quot;=&gt;&quot;/location/country&quot;, &quot;capital&quot;=&gt;&quot;Beijing&quot;}
+
+  pp Freebase.read(query)['capital']
+  #=&gt; &quot;Beijing&quot;
+</pre>
+<p>
+Example of multiple queries
+</p>
+<pre>
+  query1 = '{&quot;id&quot;:&quot;/en/india&quot;,&quot;capital&quot;:null,&quot;type&quot;:&quot;/location/country&quot;}'
+  query2 = '{&quot;id&quot;:&quot;/en/japan&quot;,&quot;capital&quot;:null,&quot;type&quot;:&quot;/location/country&quot;}'
+
+  pp Freebase.read(query1,query2)
+   =&gt; [{&quot;id&quot;=&gt;&quot;/en/india&quot;, &quot;type&quot;=&gt;&quot;/location/country&quot;, &quot;capital&quot;=&gt;&quot;New Delhi&quot;},
+       {&quot;id&quot;=&gt;&quot;/en/japan&quot;, &quot;type&quot;=&gt;&quot;/location/country&quot;, &quot;capital&quot;=&gt;&quot;Tokyo&quot;}]
+
+  pp Freebase.read(query1,query2).map{|result| result['capital']}
+  #=&gt; [&quot;New Delhi&quot;,&quot;Tokyo&quot;]
+</pre>
+<h2>Name Query</h2>
+<p>
+Example
+</p>
+<pre>
+  query = Freebase.name_query('Cher')
+  #=&gt;  {&quot;/type/reflect/any_value&quot;=&gt;[{
+           &quot;lang&quot;=&gt;&quot;/lang/en&quot;,
+           &quot;link|=&quot;=&gt;
+             [
+               &quot;/type/object/name&quot;,
+               &quot;/common/topic/alias&quot;
+             ],
+           &quot;type&quot;=&gt;&quot;/type/text&quot;,
+           &quot;value&quot;=&gt;&quot;cher&quot;
+         }],
+         &quot;t1:type&quot;=&gt;&quot;/people/person&quot;,
+         &quot;t2:type&quot;=&gt;&quot;/common/topic&quot;,
+         &quot;t3:type&quot;=&gt;{
+           &quot;name&quot;=&gt;&quot;/people/deceased_person&quot;,
+           &quot;optional&quot;=&gt;&quot;optional&quot;
+         },
+         &quot;id&quot;=&gt;&quot;null&quot;
+       }
+</pre>
+<p>
+Example of finding a person&#8217;s id
+</p>
+<pre>
+  Freebase.read(Freebase.name_query('Cher'))['id']
+  =&gt; &quot;/en/cher&quot;
+</pre>
+<h2>Query Formats</h2>
+<p>
+You can provide a query as a JSON string or as a <a
+href="Hash.html">Hash</a>.
+</p>
+<p>
+The query methods will convert:
+</p>
+<ul>
+<li>a <a href="Hash.html">Hash</a> to a JSON string e.g.
+{:foo=>&#8217;bar&#8217;} to &#8217;{&#8220;foo&#8221;:&#8220;bar&#8221;}
+
+</li>
+<li>a nil value to the freebase &#8216;null&#8217; string e.g. {:foo=>nil} to
+{&#8220;foo&#8221;:null}
+
+</li>
+<li>anything else: we call to_s then to_json
+
+</li>
+</ul>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+
