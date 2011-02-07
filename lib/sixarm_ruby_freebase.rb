@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 =begin rdoc
 
-= SixArm Ruby Gem: Freebase client with a simple way to query Freebase.com
+= SixArm.com » Ruby » Freebase client with a simple way to query Freebase.com
 
 Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2008-2010 Joel Parker Henderson
+Copyright:: Copyright (c) 2008-2011 Joel Parker Henderson
 License:: CreativeCommons License, Non-commercial Share Alike
 License:: LGPL, GNU Lesser General Public License
 
