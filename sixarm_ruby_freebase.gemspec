@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_freebase"
-  s.summary           = "SixArm Ruby Gem: Freebase client for simple mqlread access"
+  s.summary           = "SixArm.com » Ruby » Freebase client for simple mqlread access"
   s.version           = "1.0.8"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
