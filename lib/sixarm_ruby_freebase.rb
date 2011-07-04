@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 =begin rdoc
 
 = SixArm.com » Ruby » Freebase client with a simple way to query Freebase.com
@@ -15,7 +16,7 @@ Install
 Example
   require 'rubygems'
   require 'freebase'
-  require 'pp' 
+  require 'pp'
 
   query = '{"id":"/en/china","capital":null,"type":"/location/country"}'
 
@@ -44,7 +45,7 @@ Example
            "lang"=>"/lang/en",
            "link|="=>
              [
-               "/type/object/name", 
+               "/type/object/name",
                "/common/topic/alias"
              ],
            "type"=>"/type/text",
@@ -112,7 +113,7 @@ class Freebase
   end
 
 
-  # Construct a query to look up a person in Freebase                                                                                                                                         
+  # Construct a query to look up a person in Freebase
   # with the given name (or list of name alternatives)
   # and return all the info we want.
   #
@@ -181,7 +182,7 @@ class Freebase
     JSON.parse(Net::HTTP.get(uri))
   end
 
-  
+
 
 end
 
