@@ -1,6 +1,7 @@
 # SixArm.com » Ruby » <br> Freebase client with a simple way to query Freebase.com
 
-* Docs: <http://sixarm.com/sixarm_ruby_freebase/doc>
+* Doc: <http://sixarm.com/sixarm_ruby_freebase/doc>
+* Gem: <http://rubygems.org/gems/sixarm_ruby_freebase>
 * Repo: <http://github.com/sixarm/sixarm_ruby_freebase>
 * Email: Joel Parker Henderson, <joel@sixarm.com>
 
