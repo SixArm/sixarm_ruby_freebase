@@ -113,9 +113,3 @@ The query methods will convert:
   * a Hash to a JSON string e.g. {:foo=>'bar'} to '{"foo":"bar"}
   * a nil value to the freebase 'null' string e.g. {:foo=>nil} to {"foo":null}
   * anything else: we call to_s then to_json
-
-
-## Changes
-
-* 2012-03-14 1.0.8 Update docs, tests
-* 2011-10-08 1.0.8 Updates for gem publishing
