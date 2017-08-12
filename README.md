@@ -1,4 +1,4 @@
-SixArm.com → Ruby → <br> Freebase client with a simple way to query Freebase.com
+# SixArm.com → Ruby → <br> Freebase client with a simple way to query Freebase.com
 
 * Doc: <http://sixarm.com/sixarm_ruby_freebase/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_freebase>
