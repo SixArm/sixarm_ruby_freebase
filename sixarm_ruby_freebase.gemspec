@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_freebase"
-  s.summary           = "SixArm.com » Ruby » Freebase client"
+  s.summary           = "SixArm.com → Ruby → Freebase client"
   s.description       = "Freebase client for simple mqlread access"
   s.version           = "1.0.10"
 
