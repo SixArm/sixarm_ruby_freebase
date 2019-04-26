@@ -4,7 +4,7 @@ require "simplecov"
 SimpleCov.start
 require "sixarm_ruby_freebase"
 
-class Testing < Test::Unit::TestCase
+class Testing < Minitest::Test
 
  def test_read_one
    query = '{"id":"/en/china","capital":null,"type":"/location/country"}'    
